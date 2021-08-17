@@ -1,12 +1,12 @@
 /* LISTAS */
 /* Extends */
-body footer, body .whatsapp-seccion .whatsapp-tel, body .whatsapp-seccion .whatsapp-1, body .cifras-container, body .video-seccion, body .seccion-baja .sect-servicios {
+body footer, body .whatsapp-seccion .whatsapp-tel, body .whatsapp-seccion .whatsapp-1, body .cifras-container, body .video-seccion, body .seccion-baja .sect-servicios .encargamos-filas {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
-body .whatsapp-seccion, body .cifras-container .cifras-item, body .portada {
+body .whatsapp-seccion, body .cifras-container .cifras-item, body .seccion-baja .sect-servicios {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -19,12 +19,25 @@ body .whatsapp-seccion, body .cifras-container .cifras-item, body .portada {
 
 html {
   font-size: 25px;
-  font-family: "Darker Grotesque", sans-serif;
+  font-family: "Gotcha Gothic Light", sans-serif;
+  background-color: white;
 }
 html ::-webkit-scrollbar {
   display: none;
 }
 
+body .verde {
+  color: #AEC828;
+}
+body .negro {
+  color: black;
+}
+body .destacado {
+  font-weight: 600;
+}
+body .destacado-tit {
+  font-family: "Gotcha Gothic", sans-serif;
+}
 body .header {
   background-color: black;
   height: 5rem;
@@ -36,7 +49,9 @@ body .header .logo {
   margin: auto;
 }
 body .portada {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nexos-portada.png");
+  display: flex;
+  flex-direction: column;
+  background: url("../images/grupo-uno-led-portada.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,40 +59,90 @@ body .portada {
   justify-content: center;
 }
 body .portada-titulo {
+  font-family: "Gotcha Gothic Light", sans-serif;
   color: white;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 300;
   padding: 0 8rem;
-  text-align: center;
-  text-shadow: black 5px 10px 20px;
+  position: relative;
+  right: 3rem;
+}
+body .portada-titulo2 {
+  font-family: "Gotcha Gothic", sans-serif;
+  font-size: 3.8rem;
+  background: #aec828;
+  background: linear-gradient(0deg, rgba(174, 200, 40, 0) 30%, #aec828 30%, #aec828 70%, rgba(174, 200, 40, 0) 70%);
 }
 body .portada-texto {
+  font-family: "Spartan", sans-serif;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   padding: 0 8rem;
-  text-align: center;
+  padding-right: 25rem;
   text-shadow: black 5px 10px 20px;
+  position: relative;
+  right: 3rem;
 }
 body .destacado-somos {
-  background-color: #D82529;
+  background-color: #AEC828;
   margin-top: 0;
 }
 body .destacado-somos .destacado-somos-text {
+  font-family: "Gotcha Gothic Light", sans-serif;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   padding: 1rem 5.5rem;
   text-align: center;
 }
 body .seccion-baja {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/LucesNexos.png");
+  background-color: white;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 80rem;
   position: relative;
-  bottom: 1rem;
+  text-align: center;
+}
+body .seccion-baja .nos-encargamos-items {
+  font-family: "Spartan", sans-serif;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 200px;
+  border: 7px solid #aec828;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: 0.2s all;
+  margin: 0rem 3rem;
+}
+body .seccion-baja .nos-encargamos-items:hover {
+  border: 7px solid #79a123;
+  background-color: #d5e4b7;
+}
+body .seccion-baja .nos-encargamos-items .encargamos-img {
+  width: 7rem;
+  text-align: center;
+}
+body .seccion-baja .encargamos-text {
+  font-family: "Spartan", sans-serif;
+  font-size: 0.5rem;
+  margin-top: 0.7rem;
+  font-weight: 700;
+}
+body .seccion-baja .encargamos-titulo {
+  font-family: "Gotcha Gothic Light", sans-serif;
+  color: black;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 1.5rem;
+}
+body .seccion-baja .encargamos-titulo2 {
+  font-family: "Gotcha Gothic", sans-serif;
+  font-size: 2.3rem;
+  background: #aec828;
+  background: linear-gradient(0deg, rgba(174, 200, 40, 0) 30%, #aec828 30%, #aec828 70%, rgba(174, 200, 40, 0) 70%);
 }
 body .seccion-baja .sect-servicios {
   flex-wrap: wrap;
@@ -99,76 +164,24 @@ body .seccion-baja .sect-servicios .serv-text-led {
   line-height: 1;
   margin-top: 1rem;
 }
-body .seccion-baja .sect-servicios .pantallas {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/pantallas-led.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 97%;
-  background-color: white;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 200px;
-  display: flex;
-  justify-content: center;
-  border: 5px solid #D82529;
-  align-items: center;
-}
-body .seccion-baja .sect-servicios .sonido {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/sonido.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 97%;
-  background-color: white;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 200px;
-  display: flex;
-  justify-content: center;
-  border: 5px solid #D82529;
-  align-items: center;
-}
-body .seccion-baja .sect-servicios .luces {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/luces.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 97%;
-  background-color: white;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 200px;
-  display: flex;
-  justify-content: center;
-  border: 5px solid #D82529;
-  align-items: center;
-}
-body .seccion-baja .sect-servicios .sillas {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/sillas.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 97%;
-  background-color: white;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 200px;
-  display: flex;
-  justify-content: center;
-  border: 5px solid #D82529;
-  align-items: center;
-}
 body .video-seccion {
   justify-content: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  padding: 0rem 5.5rem;
+  padding: 3rem 5.5rem;
+  background: url("../images/fondo-videos.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body .video-seccion .video {
-  border: 1px solid #D82529;
+  border: 1px solid #AEC828;
+  box-shadow: -0.8rem 0.8rem #79a123;
 }
 body .video-seccion .video-texto {
-  color: white;
-  font-size: 1rem;
+  color: black;
+  font-size: 0.8rem;
   font-weight: 200;
-  text-shadow: black 5px 10px 20px;
   margin-left: 1rem;
 }
 body .video-seccion .destacado {
@@ -184,53 +197,38 @@ body .video-seccion2 {
   padding: 0rem 5.5rem;
 }
 body .video-seccion2 .video {
-  border: 1px solid #D82529;
+  border: 1px solid #AEC828;
+  box-shadow: 0.8rem 0.8rem #79a123;
 }
 body .video-seccion2 .destacado {
   font-weight: 500;
 }
 body .video-seccion2 .video-texto2 {
-  color: white;
-  font-size: 1rem;
+  color: black;
+  font-size: 0.8rem;
   font-weight: 200;
-  text-shadow: black 5px 10px 20px;
   margin-right: 1rem;
 }
 body .cifras-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/seccion-cifras-nexos.png");
-  background-position: center;
-  background-repeat: no-repeat;
   justify-content: space-evenly;
   padding: 2rem 5.5rem;
 }
 body .cifras-container .cifras-item {
-  width: 20rem;
-  height: 17rem;
-  color: white;
+  width: 7rem;
+  height: 7rem;
+  color: black;
   text-align: center;
   margin: 0 1.8rem;
-}
-body .cifras-container .cifras-nro-cont {
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 2000px;
-  border: 2px solid white;
-  width: 10rem;
-  height: 10rem;
+  border-radius: 200px;
+  border: 6px solid #AEC828;
+  box-shadow: 0 0 0 7pt #79a123;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-body .cifras-container .cifras-nro {
-  font-family: "Raleway", sans-serif;
-  color: white;
-  font-size: 2.6rem;
-  font-weight: 700;
-  line-height: 1;
 }
 body .cifras-container .cifras-texto {
-  color: white;
-  font-size: 1rem;
+  font-family: "Gotcha Gothic", sans-serif;
+  color: black;
+  font-size: 0.9rem;
   width: 10rem;
   font-weight: 200;
   line-height: 1.2;
@@ -239,10 +237,8 @@ body .cifras-container .cifras-texto {
 }
 body .whatsapp-seccion {
   justify-content: space-evenly;
-  background-color: #D82529;
+  background-color: #AEC828;
   padding: 2rem 5.5rem;
-  position: relative;
-  bottom: 1rem;
 }
 body .whatsapp-seccion .whatsapp-texto {
   width: 70%;
@@ -251,6 +247,7 @@ body .whatsapp-seccion .whatsapp-texto {
   padding-right: 3rem;
   line-height: 1;
   margin-right: 2rem;
+  text-align: left;
 }
 body .whatsapp-seccion .destacado2 {
   font-weight: 700;
@@ -301,13 +298,13 @@ body .footer-img {
 }
 
 /* Extends */
-body .seccion-baja .sect-servicios, body .video-seccion, body .cifras-container, body .whatsapp-seccion .whatsapp-1, body .whatsapp-seccion .whatsapp-tel, body footer {
+body .seccion-baja .sect-servicios .encargamos-filas, body .video-seccion, body .cifras-container, body .whatsapp-seccion .whatsapp-1, body .whatsapp-seccion .whatsapp-tel, body footer {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
-body .portada, body .cifras-container .cifras-item, body .whatsapp-seccion {
+body .seccion-baja .sect-servicios, body .cifras-container .cifras-item, body .whatsapp-seccion {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -315,13 +312,13 @@ body .portada, body .cifras-container .cifras-item, body .whatsapp-seccion {
 
 /* LISTAS */
 /* Extends */
-body .seccion-baja .sect-servicios, body .video-seccion, body .cifras-container, body .whatsapp-seccion .whatsapp-1, body .whatsapp-seccion .whatsapp-tel, body footer {
+body .seccion-baja .sect-servicios .encargamos-filas, body .video-seccion, body .cifras-container, body .whatsapp-seccion .whatsapp-1, body .whatsapp-seccion .whatsapp-tel, body footer {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
-body .portada, body .cifras-container .cifras-item, body .whatsapp-seccion {
+body .seccion-baja .sect-servicios, body .cifras-container .cifras-item, body .whatsapp-seccion {
   display: flex;
   align-items: center;
   flex-direction: column;

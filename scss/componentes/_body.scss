@@ -15,27 +15,37 @@
 
 html {
     font-size: 25px ;
-    font-family: 'Gotcha', sans-serif;
+    font-family: 'Gotcha Gothic Light', sans-serif;
     ::-webkit-scrollbar {
         display: none;
     }
-
-    @font-face {
-        font-family: Gotcha;
-        src: local("Gotcha Gothic Regular"),
-        local("GotchaGothic-Regular"),
-        url(../fonts/GotchaGothic-Regular.ttf);
-        
-      }
+    background-color: white;
 }
 
 body {
     
+.verde {
+    color: nth($color, 1);
+}
+
+.negro {
+    color: black;
+}
+
+.destacado {
+    font-weight: 600;
+}
+
+.destacado-tit {
+    font-family: 'Gotcha Gothic', sans-serif;
+}
+
 .header {
     background-color: black;
     height: 5rem;
     display: flex;
     align-items: center;
+
 
 
     .logo {
@@ -44,37 +54,48 @@ body {
         }
 }
     .portada {
-        @extend %flexbox-columna;
+        display: flex;
+        flex-direction: column;
 
-        background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.5), 
-          rgba(0, 0, 0, 0.5)
-        ), url('../images/nexos-portada.png');
+        background: url('../images/grupo-uno-led-portada.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 30rem;
         justify-content: center;
+        
+
 
     }
 
     .portada-titulo {
+        font-family: "Gotcha Gothic Light", sans-serif;
         color: white;
-        font-size: 3rem;
-        font-weight: 700;
+        font-size: 2.5rem;
+        font-weight: 300;
         padding: 0 8rem;
-        text-align: center;
-        text-shadow: black 5px 10px 20px ;
+        position: relative;
+        right: 3rem;
     }
 
+    .portada-titulo2 {
+        font-family: "Gotcha Gothic", sans-serif;
+        font-size: 3.8rem;
+        background: rgb(174,200,40);
+background: linear-gradient(0deg, rgba(174,200,40,0) 30%, rgba(174,200,40,1) 30%, rgba(174,200,40,1) 70%, rgba(174,200,40,0) 70%);
+    }
+
+
     .portada-texto {
+        font-family: 'Spartan', sans-serif;
         color: white;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 400;
         padding: 0 8rem;
-        text-align: center;
+        padding-right: 25rem;
         text-shadow: black 5px 10px 20px ;
+        position: relative;
+        right: 3rem;
 
     }
 
@@ -83,36 +104,84 @@ body {
         margin-top: 0;
 
         .destacado-somos-text {
+            font-family: "Gotcha Gothic Light", sans-serif;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
             padding: 1rem 5.5rem;
             text-align: center;
-    
             }
         }
 
         .seccion-baja {
-            background:
-            linear-gradient(
-              rgba(0, 0, 0, 0.5), 
-              rgba(0, 0, 0, 0.5)
-            ), url('../images/LucesNexos.png');
+            background-color: white;            
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             height: 80rem;
             position: relative;
-            bottom: 1rem;
+            text-align: center;
+
+            
+            .nos-encargamos-items {
+                font-family: 'Spartan', sans-serif;
+                height: 7rem;
+                width: 7rem;
+                border-radius: 200px;
+                border: 7px solid #aec828;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                transition: 0.2s all;
+                margin: 0rem 3rem;
+
+                &:hover {
+                    border: 7px solid #79a123;
+                    background-color: #d5e4b7;    
+}
+
+                .encargamos-img {
+                    width: 7rem;
+                    text-align: center;
+                }
+        
+
+            }
+
+            .encargamos-text {
+                font-family: 'Spartan', sans-serif;
+                font-size: 0.5rem;
+                margin-top: 0.7rem;
+                font-weight: 700;
+            }
+
+
+            .encargamos-titulo {
+                font-family: "Gotcha Gothic Light", sans-serif;
+                color: black;
+                font-size: 2rem;
+                font-weight: 300;
+                margin-top: 1.5rem;
+            }
+        
+            .encargamos-titulo2 {
+                font-family: "Gotcha Gothic", sans-serif;
+                font-size: 2.3rem;
+                background: #aec828;
+        background: linear-gradient(0deg, rgba(174,200,40,0) 30%, rgba(174,200,40,1) 30%, rgba(174,200,40,1) 70%, rgba(174,200,40,0) 70%);
+            }
 
 
             .sect-servicios {
-                @extend %flexbox-row;
+                @extend %flexbox-columna;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
                 padding: 5rem 5.5rem 0 5.5rem;
                 
 
+                .encargamos-filas {
+                    @extend %flexbox-row;
+                }
 
 
                 .serv-text {
@@ -133,90 +202,8 @@ body {
                     margin-top: 1rem;
                 }
 
-                .pantallas {
-                    background:
-                    linear-gradient(
-                      rgba(0, 0, 0, 0.1), 
-                      rgba(0, 0, 0, 0.1)
-                    ), url('../images/pantallas-led.png');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 97%;
-                    background-color: white;
-                    height: 10rem;
-                    width: 10rem;
-                    border-radius: 200px;
-                    display: flex;
-                    justify-content: center;
-                    border: 5px solid #D82529;
-                    align-items: center;
-            
 
-                }
-
-  
-                
-                .sonido {
-                    background:
-                    linear-gradient(
-                        rgba(0, 0, 0, 0.1), 
-                        rgba(0, 0, 0, 0.1)
-                      ), url('../images/sonido.png');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 97%;
-                    background-color: white;
-                    height: 10rem;
-                    width: 10rem;
-                    border-radius: 200px;
-                    display: flex;
-                    justify-content: center;
-                    border: 5px solid #D82529;                    
-                    align-items: center;
-
-                }
-
-                
-                .luces {
-                    background:
-                    linear-gradient(
-                        rgba(0, 0, 0, 0.1), 
-                        rgba(0, 0, 0, 0.1)
-                      ), url('../images/luces.png');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 97%;
-                    background-color: white;
-                    height: 10rem;
-                    width: 10rem;
-                    border-radius: 200px;
-                    display: flex;
-                    justify-content: center;
-                    border: 5px solid #D82529;                    
-                      align-items: center;
-
-                }
-
-                
-                .sillas {
-                    background:
-                    linear-gradient(
-                        rgba(0, 0, 0, 0.1), 
-                        rgba(0, 0, 0, 0.1)
-                      ), url('../images/sillas.png');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 97%;
-                    background-color: white;
-                    height: 10rem;
-                    width: 10rem;
-                    border-radius: 200px;
-                    display: flex;
-                    justify-content: center;
-                    border: 5px solid #D82529;                    
-                    align-items: center;
-
-                }
+ 
             }
         }
 
@@ -227,17 +214,22 @@ body {
             justify-content: center;
             margin-top: 3rem;
             margin-bottom: 3rem;
-            padding: 0rem 5.5rem;  
+            padding: 3rem 5.5rem;  
+            background: url('../images/fondo-videos.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+    
 
             .video {
                 border: 1px solid nth($color, 1);
+                box-shadow: -0.8rem 0.8rem #79a123;
             }
 
             .video-texto {
-                color: white;
-                font-size: 1rem;
+                color: black;
+                font-size: 0.8rem;
                 font-weight: 200;
-                text-shadow: black 5px 10px 20px ;
                 margin-left: 1rem;
             }
 
@@ -257,16 +249,17 @@ body {
         
             .video {
                 border: 1px solid nth($color, 1);
+                box-shadow: 0.8rem 0.8rem #79a123;
+
             }
         
             .destacado {
                 font-weight: 500;
             }
             .video-texto2 {
-                color: white;
-                font-size: 1rem;
+                color: black;
+                font-size: 0.8rem;
                 font-weight: 200;
-                text-shadow: black 5px 10px 20px ;
                 margin-right: 1rem;
 
             }
@@ -276,53 +269,35 @@ body {
 
         .cifras-container {
             @extend %flexbox-row;
-            background:
-            linear-gradient(
-                rgba(0, 0, 0, 0.1), 
-                rgba(0, 0, 0, 0.1)
-              ), url('../images/seccion-cifras-nexos.png');
-            background-position: center;
-            background-repeat: no-repeat;
             justify-content: space-evenly;
             padding: 2rem 5.5rem;
 
             .cifras-item {
                 @extend %flexbox-columna;
-                width: 20rem;
-                height: 17rem;
-                color: white;
+                width: 7rem;
+                height: 7rem;
+                color: black;
                 text-align: center;
                 margin: 0 1.8rem;
-            }
-
-            .cifras-nro-cont {
-                background-color: rgba(0, 0, 0, 0);
-                border-radius: 2000px;
-                border: 2px solid white;
-                width: 10rem;
-                height: 10rem;
+                border-radius: 200px;
+                border: 6px solid #AEC828;
+                box-shadow: 0 0 0 7pt #79a123;
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                text-align: center;
+
             }
 
-            .cifras-nro {
-                font-family: 'Raleway', sans-serif;
-                color: white;
-                font-size: 2.6rem;
-                font-weight: 700;
-                line-height: 1;   
-            }
+
+
             .cifras-texto {
-                color: white;
-                font-size: 1rem;
+                font-family: "Gotcha Gothic", sans-serif;
+                color: black;
+                font-size: 0.9rem;
                 width: 10rem;
                 font-weight: 200;
                 line-height: 1.2; 
                 font-weight: 500;
                 margin-top: 1rem;
-
             
             }
 
@@ -335,8 +310,7 @@ body {
             justify-content: space-evenly;
             background-color: nth($color, 1);
             padding: 2rem 5.5rem;
-            position: relative;
-            bottom: 1rem;
+
             
             .whatsapp-texto {
                 width: 70%;
@@ -345,6 +319,7 @@ body {
                 padding-right: 3rem;
                 line-height: 1;
                 margin-right: 2rem;
+                text-align: left;
             }
 
             .destacado2 {
