@@ -16,9 +16,6 @@
 html {
     font-size: 25px ;
     font-family: 'Gotcha Gothic Light', sans-serif;
-    ::-webkit-scrollbar {
-        display: none;
-    }
     background-color: white;
 }
 
@@ -64,7 +61,9 @@ body {
         height: 30rem;
         justify-content: center;
         
-
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
     }
 
@@ -76,6 +75,7 @@ body {
         padding: 0 8rem;
         position: relative;
         right: 3rem;
+        
     }
 
     .portada-titulo2 {
