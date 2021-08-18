@@ -93,7 +93,15 @@ body .destacado-somos .destacado-somos-text {
   color: white;
   font-size: 1.3rem;
   font-weight: 600;
-  padding: 1rem 5.5rem;
+  padding: 1rem 5.5rem 0rem 5.5rem;
+  text-align: center;
+}
+body .destacado-somos .destacado-somos-text-negro {
+  font-family: "Gotcha Gothic Light", sans-serif;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0rem 5.5rem 1rem 5.5rem;
   text-align: center;
 }
 body .seccion-baja {
@@ -112,6 +120,7 @@ body .seccion-baja .nos-encargamos-items {
   border-radius: 200px;
   border: 7px solid #aec828;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   transition: 0.2s all;
@@ -341,62 +350,119 @@ body .seccion-baja .sect-servicios, body .cifras-container .cifras-item, body .w
     display: none !important;
   }
 
+  body {
+    overflow: hidden;
+  }
+  body .seccion-baja {
+    height: 100%;
+    overflow: hidden;
+  }
+  body .seccion-baja .items-mobile {
+    overflow: hidden;
+    margin: 0rem 0rem;
+    height: 12rem;
+  }
+  body .seccion-baja .nos-encargamos-items {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 200px;
+    border: 5px solid #aec828;
+    margin: 0rem 1rem;
+    overflow: hidden;
+  }
+  body .seccion-baja .encargamos-text {
+    font-family: "Spartan", sans-serif;
+    font-size: 0.45rem;
+  }
+  body .seccion-baja .sect-servicios {
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+  body .seccion-baja .sect-servicios .encargamos-filas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
   body .header .logo {
     height: 2rem;
   }
-  body .portada-titulo {
-    font-size: 1.6rem;
+  body .portada {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0deg, black 26%, rgba(0, 0, 0, 0) 99%), url("../images/grupo-uno-led-portada-mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body .portada .portada-titulo {
+    font-family: "Gotcha Gothic", sans-serif;
+    font-size: 1.5rem;
     margin: 1rem 0;
     padding: 0 0.8rem;
+    position: unset;
+    text-align: center;
+    line-height: 1.2;
   }
-  body .portada-texto {
-    font-size: 0.7rem;
+  body .portada .portada-titulo2 {
+    font-size: 2.3rem;
+    margin: 1rem 0;
+    padding: 0 0.8rem;
+    position: unset;
+    text-align: center;
+  }
+  body .portada .portada-texto {
+    font-size: 0.65rem;
     padding: 0 0.5rem;
     font-weight: 500;
+    position: unset;
+    text-align: center;
   }
   body .destacado-somos .destacado-somos-text {
-    font-size: 1rem;
-    padding: 1rem 0.7rem;
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
   }
-  body .seccion-baja {
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/grupo-uno-led-portada-mobile.png");
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 100%;
-    height: 100%;
+  body .destacado-somos .destacado-somos-text-negro {
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
   }
-  body .seccion-baja .sect-servicios {
-    padding: 0rem 0rem;
-    margin: 2rem 0rem;
-  }
-  body .seccion-baja .sect-servicios .pantallas {
-    margin-bottom: 1.5rem;
-  }
-  body .seccion-baja .sect-servicios .sonido {
-    margin-bottom: 1.5rem;
-  }
-  body .seccion-baja .sect-servicios .luces {
-    margin-bottom: 1.5rem;
-  }
-  body .seccion-baja .video-seccion {
+  body .video-seccion {
     flex-direction: column;
-    padding: 0rem 0rem;
+    padding: 1.5rem 0rem;
+    background: url("../images/fondo-video-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
-  body .seccion-baja .video-seccion .video {
-    height: 10rem;
+  body .video-seccion .video {
+    height: 9rem;
     width: 14rem;
+    border: 1px solid #AEC828;
+    box-shadow: -0.8rem 1rem #79a123;
   }
-  body .seccion-baja .video-seccion .video-texto {
+  body .video-seccion .video-texto {
     margin-top: 1rem;
-    padding: 0 0.5rem;
-    font-size: 0.7rem;
+    padding: 0 1rem;
+    font-size: 0.6rem;
+    margin-left: 0rem;
   }
   body .video-seccion2 {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
     justify-content: center;
-    padding: 2rem 0.5rem;
+    padding: 1.5rem 0.5rem;
+    background: url("../images/fondo-video-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   body .video-seccion2 .video {
     height: 10rem;
@@ -405,19 +471,41 @@ body .seccion-baja .sect-servicios, body .cifras-container .cifras-item, body .w
   body .video-seccion2 .video-texto2 {
     margin-top: 1rem;
     padding: 0 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     margin-right: 0rem;
   }
   body .video-seccion2 .video-texto2 .destacado {
     font-weight: 500;
   }
   body .cifras-container {
-    flex-direction: column;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/seccion-cifras-nexos-mobile.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: space-evenly;
-    padding: 1.5rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 0.1rem 0.5rem;
+  }
+  body .cifras-container .cifras-item {
+    width: 5rem;
+    height: 5rem;
+    color: black;
+    text-align: center;
+    margin: 1rem 1rem;
+    border-radius: 200px;
+    border: 5px solid #AEC828;
+    box-shadow: 0 0 0 4pt #79a123;
+    display: flex;
+    justify-content: center;
+  }
+  body .cifras-container .cifras-texto {
+    font-family: "Gotcha Gothic", sans-serif;
+    color: black;
+    font-size: 0.7rem;
+    width: 5rem;
+    font-weight: 200;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-top: 1rem;
   }
   body .whatsapp-seccion {
     flex-direction: column;
@@ -433,6 +521,7 @@ body .seccion-baja .sect-servicios, body .cifras-container .cifras-item, body .w
     padding-right: 0rem;
     line-height: 1;
     margin-right: 0rem;
+    text-align: center;
   }
   body .whatsapp-seccion .whatsapp-1 {
     display: flex;
@@ -452,12 +541,13 @@ body .seccion-baja .sect-servicios, body .cifras-container .cifras-item, body .w
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 0rem;
+    padding: 0.1rem 0rem;
     height: 10rem;
     box-shadow: 0rem 2rem black;
   }
   body footer .footer-img {
-    margin-bottom: 1rem;
+    height: 4rem;
+    margin-bottom: 0rem;
   }
 }
 

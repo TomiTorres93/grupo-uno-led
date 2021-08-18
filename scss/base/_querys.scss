@@ -11,7 +11,7 @@
     *{
         margin: 0px;
         padding: 0px;
-        overflow-x: hidden !important;
+        overflow-x: hidden !important ;
     }
 
 
@@ -21,119 +21,208 @@
 
     body {
 
-        .header {
-        .logo {
-            height: 2rem;
+        overflow: hidden ;
+
+        .seccion-baja {
+            height: 100%;
+            overflow: hidden ;
+
+            .items-mobile {
+                overflow: hidden ;
+                margin: 0rem 0rem;
+                height: 12rem;
+            }
+
+            .nos-encargamos-items {
+                height: 5rem;
+                width: 5rem;
+                border-radius: 200px;
+                border: 5px solid #aec828;
+                margin: 0rem 1rem;
+                overflow: hidden ;
+            }
+
+            .encargamos-text {
+                font-family: 'Spartan', sans-serif;
+                font-size: 0.45rem;
+            }
+    
+    
+            .sect-servicios {
+                padding: 0rem 0.5rem 0rem 0.5rem ;
+                height: 100%;
+                display: flex;
+                flex-direction: column ;
+                justify-content: center;
+                overflow: hidden ;
+
+                .encargamos-filas {
+                    display: flex;
+                    flex-direction: row ;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    overflow: hidden;
+                }
+            }
+    
+    
         }
-    }
+
+        .header {
+            .logo {
+                height: 2rem;
+            }
+        }
+        .portada {
+            display: flex;
+            flex-direction: column;
+background: linear-gradient(0deg, rgba(0,0,0,1) 26%, rgba(0,0,0,0) 99%), url('../images/grupo-uno-led-portada-mobile.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+  
         .portada-titulo {
-            font-size: 1.6rem;
+            font-family: "Gotcha Gothic", sans-serif;
+            font-size: 1.5rem;
             margin: 1rem 0;
             padding: 0 0.8rem;
-            
+            position: unset;
+            text-align: center;
+            line-height: 1.2;
+
         }
+
+        .portada-titulo2 {
+            font-size: 2.3rem;
+            margin: 1rem 0;
+            padding: 0 0.8rem;
+            position: unset;
+            text-align: center;
+        }
+
 
         .portada-texto {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             padding: 0 0.5rem;
             font-weight: 500;
+            position: unset;
+            text-align: center;
         }
+    }
 
         .destacado-somos {
-        .destacado-somos-text {
-            font-size: 1rem;
-            padding: 1rem 0.7rem;
-        }
+            
+            .destacado-somos-text {
+                font-size: 1.2rem;
+                padding: 1rem 0.5rem;
+            }
 
-        
+            .destacado-somos-text-negro {
+                font-size: 1.2rem;
+                padding: 1rem 0.5rem;
+            }
+    
+
+
+
+
+
+   
+    
+}
+.video-seccion {
+    flex-direction: column;
+    padding: 1.5rem 0rem;
+    background: url('../images/fondo-video-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    .video {
+        height: 9rem;
+        width: 14rem;
+
+        border: 1px solid nth($color, 1);
+        box-shadow: -0.8rem 1rem #79a123;
+    }
+    .video-texto {
+        margin-top: 1rem;
+        padding: 0 1rem;
+        font-size: 0.6rem;
+        margin-left: 0rem;
     }
 
-    .seccion-baja {
-        background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.1), 
-          rgba(0, 0, 0, 0.1)
-        ), url('../images/grupo-uno-led-portada-mobile.png');
-        background-position: center;
-        background-repeat: repeat;
-        background-size: 100%;
-        height: 100%;
-        .sect-servicios {
-            padding: 0rem 0rem;
-            margin: 2rem 0rem;
 
-            .pantallas {
-                margin-bottom: 1.5rem;
+}
+
+
+.video-seccion2 {
+display: flex;
+align-items: center;
+flex-direction: column-reverse;
+justify-content: center;
+padding: 1.5rem 0.5rem;
+background: url('../images/fondo-video-mobile.svg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+.video {
+    height: 10rem;
+    width: 14rem;
+}
+
+.video-texto2 {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    font-size: 0.6rem;
+    margin-right: 0rem;
+
+    .destacado {
+        font-weight: 500;
+    }
+
+}
+    }
+
+           //CIFRAS CONTAINER
+
+           .cifras-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+            padding: 0.1rem 0.5rem;
+    
+            .cifras-item {
+                width: 5rem;
+                height: 5rem;
+                color: black;
+                text-align: center;
+                margin: 1rem 1rem;
+                border-radius: 200px;
+                border: 5px solid #AEC828;
+                box-shadow: 0 0 0 4pt #79a123;
+                display: flex;
+                justify-content: center;
             }
-
-            .sonido {
-                margin-bottom: 1.5rem;
-            }
-
-            .luces {
-                margin-bottom: 1.5rem;
-            }
-
-
-        }
-
-        .video-seccion {
-            flex-direction: column;
-            padding: 0rem 0rem;
-
-            .video {
-                height: 10rem;
-                width: 14rem;
-            }
-            .video-texto {
-                margin-top: 1rem;
-                padding: 0 0.5rem;
+    
+            .cifras-texto {
+                font-family: "Gotcha Gothic", sans-serif;
+                color: black;
                 font-size: 0.7rem;
-            }
-
-
-        }
-    }
-
-    .video-seccion2 {
-        display: flex;
-        align-items: center;
-        flex-direction: column-reverse;
-        justify-content: center;
-        padding: 2rem 0.5rem;
-
-        .video {
-            height: 10rem;
-            width: 14rem;
-        }
-    
-        .video-texto2 {
-            margin-top: 1rem;
-            padding: 0 0.5rem;
-            font-size: 0.7rem;
-            margin-right: 0rem;
-
-            .destacado {
+                width: 5rem;
+                font-weight: 200;
+                line-height: 1.2; 
                 font-weight: 500;
+                margin-top: 1rem;
+            
             }
-
     
-}
-}
-
-    //CIFRAS
-
-    .cifras-container {
-        flex-direction: column;
-        background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.1), 
-            rgba(0, 0, 0, 0.1)
-          ), url('../images/seccion-cifras-nexos-mobile.png');
-        background-repeat: no-repeat; 
-        background-size: cover;
-        justify-content: space-evenly;
-        padding: 1.5rem 0.5rem;
 
 }
 
@@ -154,6 +243,7 @@
         padding-right: 0rem;
         line-height: 1;
         margin-right: 0rem;
+        text-align: center;
     }
 
     .whatsapp-1 {
@@ -173,7 +263,6 @@
         font-size: 0.9rem;
         padding: 0rem 0.7rem;
     }
-    
 }
 
 //FOOTER 
@@ -182,16 +271,16 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 0rem;
+    padding: 0.1rem 0rem;
     height: 10rem;
     box-shadow: 0rem 2rem black;
 
     .footer-img {
-        margin-bottom: 1rem;
+        height: 4rem;    
+        margin-bottom: 0rem;
     }
 
 }
-
 }
 
 }

@@ -108,9 +108,18 @@ background: linear-gradient(0deg, rgba(174,200,40,0) 30%, rgba(174,200,40,1) 30%
             color: white;
             font-size: 1.3rem;
             font-weight: 600;
-            padding: 1rem 5.5rem;
+            padding: 1rem 5.5rem 0rem 5.5rem;
             text-align: center;
             }
+
+            .destacado-somos-text-negro {
+                font-family: "Gotcha Gothic Light", sans-serif;
+                color: black;
+                font-size: 1.3rem;
+                font-weight: 600;
+                padding: 0rem 5.5rem 1rem 5.5rem;
+                text-align: center;
+                }
         }
 
         .seccion-baja {
@@ -130,6 +139,7 @@ background: linear-gradient(0deg, rgba(174,200,40,0) 30%, rgba(174,200,40,1) 30%
                 border-radius: 200px;
                 border: 7px solid #aec828;
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 text-align: center;
                 transition: 0.2s all;
@@ -138,7 +148,7 @@ background: linear-gradient(0deg, rgba(174,200,40,0) 30%, rgba(174,200,40,1) 30%
                 &:hover {
                     border: 7px solid #79a123;
                     background-color: #d5e4b7;    
-}
+                }
 
                 .encargamos-img {
                     width: 7rem;
