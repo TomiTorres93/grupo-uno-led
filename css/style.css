@@ -197,13 +197,17 @@ body .video-seccion .destacado {
   font-weight: 500;
 }
 body .video-seccion2 {
+  background: url("../images/fondo-video-2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  padding: 0rem 5.5rem;
+  padding: 3rem 5.5rem;
 }
 body .video-seccion2 .video {
   border: 1px solid #AEC828;
